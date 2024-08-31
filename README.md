@@ -1,8 +1,8 @@
-![](https://seeklogo.com/images/K/kali-linux-logo-AED181186E-seeklogo.com.png)
-
 # kali-build
 
 kali-build is my custom Ansible playbook, designed to deploy my ideal Kali Linux environment.
+
+![](./kali-build-screenshot.png)
 
 ## Requirements
 

@@ -3,9 +3,9 @@
   hosts: localhost
   connection: local
   roles:
-    #- role: "pimpmykali"
+    #- role: "roles/pimpmykali"
     - role: "roles/install"
     - role: "roles/configuration"
-    #- role: "fonts"
+    #- role: "roles/fonts"
     #- role: "roles/browser"
     - role: "roles/system"
