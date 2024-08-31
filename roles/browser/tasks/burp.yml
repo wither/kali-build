@@ -26,7 +26,7 @@
   become_method: sudo
   when: burp_cert.stat.exists == False
 
-- name: "Create directory for burpsuite extras"
+- name: "Create directory for burp suite extras"
   ansible.builtin.file:
     path: "{{ burpsuite_extras_dir }}"
     state: directory
@@ -44,7 +44,7 @@
   #become_method: sudo
   #loop: "{{ lookup('dict', burpsuite_extras_jars) }}"
   
-- name: "Copy burpsuite community config"
+- name: "Copy burp suite community config"
   template:
     src: "templates/UserConfigCommunity.json.j2"
     dest: "/home/{{ ansible_user_id }}/.BurpSuite/UserConfigCommunity.json"
