@@ -1,0 +1,6 @@
+- name: "Clone notes git repository"
+  git:
+    repo: "https://github.com/wither/notes"
+    dest: "{{ ansible_env.HOME }}/"
+    clone: yes
+    update: yes
