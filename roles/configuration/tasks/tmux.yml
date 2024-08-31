@@ -1,0 +1,5 @@
+---
+- name: "Copy .tmux.conf to {{ ansible_envHOME }}"
+  copy:
+    src: "{{ playbook_dir }}/roles/configuration/files/.tmux.conf"
+    dest: "{{ ansible_env.HOME }}/.tmux.conf"

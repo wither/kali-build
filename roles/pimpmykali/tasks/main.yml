@@ -1,0 +1,12 @@
+---
+- name: "Clone pimpmykali git repository"
+  git:
+    repo: "https://github.com/Dewalt-arch/pimpmykali.git"
+    dest: "/opt/pimpmykali"
+    clone: yes
+    update: yes
+  become: true
+  become_method: sudo
+
+- name: "Run pimpmykali.sh script"
+  command: "yes n | sudo /opt/pimpmykali/pimpmykali.sh"

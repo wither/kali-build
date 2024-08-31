@@ -1,0 +1,12 @@
+- name: "Clone nerd-fonts git repository"
+  git:
+    repo: "https://github.com/ryanoasis/nerd-fonts.git"
+    dest: "/opt/nerd-fonts"
+    clone: yes
+    update: yes
+    depth: 1
+  become: true
+  become_method: sudo 
+
+- name: "Run install script"
+  command: sh -c "/opt/nerd-fonts/install.sh JetBrainsMono"
