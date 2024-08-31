@@ -5,6 +5,7 @@
       - tmux
       - alacritty
       - obsidian
+      - xfce4-dev-tools
       # neovim build prerequisites
       - ninja-build
       - gettext

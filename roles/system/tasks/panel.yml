@@ -1,0 +1,4 @@
+- name: "Copy XFCE panel profile to {{ ansible_env.HOME }}/.local/share/xfce4-panel-profiles"
+  copy:
+    src: "{{ playbook_dir }}/roles/system/files/panel.tar.bz2"
+    dest: "{{ ansible_env.HOME }}/.local/share/xfce4-panel-profiles"
