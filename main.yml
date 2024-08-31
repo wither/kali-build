@@ -4,7 +4,7 @@
   connection: local
   roles:
     #- role: "pimpmykali"
-    #- role: "roles/install"
+    - role: "roles/install"
     - role: "roles/configuration"
     #- role: "fonts"
     #- role: "roles/browser"

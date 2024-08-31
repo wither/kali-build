@@ -1,0 +1,13 @@
+---
+- name: "Create discord folder in /opt"
+  ansible.builtin.file:
+    path: "/opt/discord"
+    state: directory
+  become: true
+  become_method: sudo
+
+- name: "Download discord.deb via discord API"
+  command: "chdir=/opt/discord/ sudo wget 'https://discord.com/api/download?platform=linux&format=deb' -O discord.deb"
+
+- name: "Install discord from discord.deb"
+  command: "sudo apt install /opt/discord/discord.deb"
