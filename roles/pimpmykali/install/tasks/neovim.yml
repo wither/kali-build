@@ -1,0 +1,27 @@
+- name: "Clone neovim git repository to /opt/"
+  git:
+    repo: "https://github.com/neovim/neovim"
+    dest: "/opt/neovim"
+    clone: yes
+    update: yes
+  become: true
+  become_method: sudo
+
+- name: "Set neovim CMAKE build type"
+  command: "sudo make -C /opt/neovim CMAKE_BUILD_TYPE=RelWithDebInfo"
+
+- name: "Set neovim release to stable"
+  command: "chdir=/opt/neovim/ sudo git checkout stable"
+
+- name: "Make install neovim"
+  command: "sudo make -C /opt/neovim install"
+
+- name: "Clone nvchad git repository to {{ ansible_env.HOME }}/.config/nvim/"
+  git:
+    repo: "https://github.com/NvChad/starter"
+    dest: "{{ ansible_env.HOME }}/.config/nvim"
+    clone: yes
+    update: yes
+
+- name: "Delete {{ ansible_env.HOME }}/.config/nvim/.git/ folder"
+  command: "rm {{ ansible_env.HOME }}/.config/nvim/.git"

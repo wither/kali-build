@@ -1,0 +1,15 @@
+- name: "Copy zsh.zip to {{ ansible_env.HOME }}/.config/"
+  copy:
+    src: "{{ playbook_dir }}/roles/configuration/files/zsh.zip"
+    dest: "{{ ansible_env.HOME }}/.config/zsh.zip"
+
+- name: "Unzip zsh.zip in {{ ansible_env.HOME }}.config/"
+  command: "unzip -o {{ ansible_env.HOME }}/.config/zsh.zip -d {{ ansible_env.HOME }}/.config/"
+
+- name: "Delete zsh.zip from {{ ansible_env.HOME }}/.config/"
+  command: "rm {{ ansible_env.HOME }}/.config/zsh.zip"
+
+- name: "Copy .zshrc to {{ ansible_env.HOME }}/"
+  copy:
+    src: "{{ playbook_dir }}/roles/configuration/files/zshrc"
+    dest: "{{ ansible_env.HOME }}/.zshrc"

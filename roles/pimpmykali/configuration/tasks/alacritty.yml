@@ -1,0 +1,16 @@
+---
+- name: "Create /alacritty/ folder in {{ ansible_env.HOME }}/.config/"
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME}}/.config/alacritty"
+    state: directory
+
+- name: "Copy alacritty.toml to {{ ansible_env.HOME }}/.config/"
+  copy:
+    src: "{{ playbook_dir}}/roles/configuration/files/alacritty.toml"
+    dest: "{{ ansible_env.HOME }}/.config/alacritty/alacritty.toml"
+
+- name: "Clone alacritty-theme git repository to {{ ansible_env.HOME }}/.config/alacritty/themes/"
+  git:
+    repo: "https://github.com/alacritty/alacritty-theme"
+    dest: "{{ ansible_env.HOME }}/.config/alacritty/themes"
+
