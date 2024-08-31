@@ -22,12 +22,12 @@ ansible-playbook main.yml
 ## Features
 
 - [pimpmykali](https://github.com/Dewalt-arch/pimpmykali) support.
-- [Neovim](https://neovim.io/) configuration with [NvChad](https://nvchad.com/).
-- [Burp Suite](https://portswigger.net/burp) configuration and certificate support.
+- Neovim configuration with [NvChad](https://nvchad.com/).
+- Burp Suite configuration and certificate support.
 - "One Dark" theme across my favourite applications.
 - [Tmux](https://github.com/tmux/tmux), [Alacritty](https://github.com/alacritty/alacritty) & zsh configuration.
-- [Firefox ESR](https://www.mozilla.org/en-GB/firefox/enterprise/) configuration including extensions, themes, settings and bookmarks.
-- Automatically installs my Obsidian [notes](https://github.com/wither/notes).
+- Firefox-ESR configuration including extensions, themes, settings and bookmarks.
+- Installs my Obsidian [notes](https://github.com/wither/notes).
 - and more!
 
 ## Credits
