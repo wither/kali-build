@@ -15,6 +15,7 @@ python3 -m pip install ansible
 ```bash
 git clone https://github.com/wither/kali-build.git
 cd kali-build
+sudo whoami
 ansible-playbook main.yml
 ```
 
@@ -31,7 +32,7 @@ ansible-playbook main.yml
 
 ## Credits
 
-Credit to [IppSec](https://github.com/IppSec) for a lot of the code for the [browser](https://github.com/wither/kali-build/tree/master/roles/browser) role and inspiration.
+Credit to [IppSec](https://github.com/IppSec) for a lot of the code for the [browser](https://github.com/wither/kali-build/tree/master/roles/browser) role.
 
 ## License
 
